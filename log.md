@@ -11,3 +11,4 @@ Udemy js 강의 일자별 로그
 
 - Section2 40 (코드 주석 작업)
 - Section2 41 (연산자 더 보기)
+- Section2 42 (코어 자료형 더 보기) - 코드 수정X
