@@ -9,8 +9,13 @@ function add(num1, num2) {
 }
 
 currentResult = add(1, 2); //중괄호로 여러줄 있는 코드(ex. 함수 정의...)는 일반적으로 세미콜론 사용 X*/
+function getUserNumberInput() {
+    return parseInt(usrInput.value);
+}
 
 function add() {
+    const enteredNumber = getUserNumberInput(); //parseInt(userInput.value);
+    const calcDescription = `${currentResult} + ${enteredNumber}` //`과 $를 사용 -> 암묵적으로 toString을 실행하는 것
     currentResult = currentResult + parseInt(userInput.value); //현재는 userInput.value는 변수형이 string 상태
     outputResult(currentResult, '');
 } // 전역변수만 조작하는 함수는 무언가를 return하기 시작하면 코드가 더더욱 복잡해진다.
