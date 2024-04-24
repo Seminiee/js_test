@@ -9,13 +9,16 @@ function add(num1, num2) {
 }
 
 currentResult = add(1, 2); //중괄호로 여러줄 있는 코드(ex. 함수 정의...)는 일반적으로 세미콜론 사용 X*/
+// This is a function that extracts the user input from the input field. (too long)
+// Gets input from input field.
 function getUserNumberInput() {
     return parseInt(usrInput.value);
 }
 
+// Generates adnd writes calculation log
 function createAndWriteOutput(operator, resultBeforeCalc, calcNumber) {
     const calcDescription = `${resultBeforeCalc} ${operator} ${calcNumber}`; //Text로 javascript로 실행되는 수학식이 아님
-    outputResult(currentResult, calcDescription);
+    outputResult(currentResult, calcDescription); // from vendor file <- in-line comment
 }
 
 function add() {
