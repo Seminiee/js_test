@@ -25,28 +25,28 @@ function add() {
     const enteredNumber = getUserNumberInput(); //parseInt(userInput.value);
     const initialResult = currentResult;
     //const calcDescription = `${currentResult} + ${enteredNumber}` //`과 $를 사용 -> 암묵적으로 toString을 실행하는 것
-    currentResult = currentResult +  enteredNumber; //현재는 userInput.value는 변수형이 string 상태
+    currentResult += enteredNumber; //현재는 userInput.value는 변수형이 string 상태
     createAndWriteOutput('+', initialResult, enteredNumber)
 } // 전역변수만 조작하는 함수는 무언가를 return하기 시작하면 코드가 더더욱 복잡해진다.
 
 function subtract() {
     const enteredNumber = getUserNumberInput(); 
     const initialResult = currentResult; 
-    currentResult = currentResult - enteredNumber; 
+    currentResult -= enteredNumber; 
     createAndWriteOutput('-', initialResult, enteredNumber);
 }
 
 function multiply() {
     const enteredNumber = getUserNumberInput(); 
     const initialResult = currentResult; 
-    currentResult = currentResult * enteredNumber; 
+    currentResult *= enteredNumber; 
     createAndWriteOutput('*', initialResult, enteredNumber);
 }
 
 function divide() {
     const enteredNumber = getUserNumberInput(); 
     const initialResult = currentResult; 
-    currentResult = currentResult / enteredNumber; 
+    currentResult /= enteredNumber; 
     createAndWriteOutput('/', initialResult, enteredNumber);
 }
 addBtn.addEventListener('click',add);
