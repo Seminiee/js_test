@@ -21,3 +21,6 @@ Udemy js 강의 일자별 로그
 - Section2 46 (객체 데이터에 액세스하기)
 - Section2 47 (객체를 사용하는 재사용 가능한 함수 추가하기)
 - Section2 48 (undefined, null & NaN) -> 코드 수정X, Notion에 개념 내용 저장
+- Section2 49 ("Typeof" 연산자)
+- Section2 50 ("defer" & "async"를 이용해 스크립트 올바르게 임포트하기)
+- Section2 51 (JavaScript 임포트하기 - 요약) -> 코드 수정X, PDF 파일로 Notion에 저장

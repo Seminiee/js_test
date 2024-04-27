@@ -9,7 +9,15 @@
       href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
       rel="stylesheet"
     />
+    <!--
+      기존: 웹 페이지 버튼이 준비되지 않은 상태에서 상호 작용을 시도 -> 에러 발생
+      defer: 스크립트에 추가할 수 있는 추가 속성
+      브라우저에 스크립트를 바로 다운로드 하지만 HTML 구문 분석도 차단하지 않도록 해서 HTML 구문 분석을 계속 하고 구문 분석이 끝난 후에만 스크립트가 실행
+      다운로드가 끝나면 바로 스크립트를 실행하는 대신 스크립트가 다운로드 -> HTML 구문 분석 -> 스크립트 실행
+    -->
     <link rel="stylesheet" href="assets/styles/app.css" />
+    <script src="assets/scripts/vendor.js" defer></script> 
+    <script src="assets/scripts/app.js" defer></script>
   </head>
   <body>
     <header>
@@ -29,7 +37,6 @@
       <h2 id="current-calculation">0</h2>
       <h2>Result: <span id="current-result">0</span></h2>
     </section>
-    <script src="assets/scripts/vendor.js"></script>
-    <script src="assets/scripts/app.js"></script>
+   
   </body>
 </html>
