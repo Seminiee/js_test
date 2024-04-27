@@ -22,12 +22,30 @@ function createAndWriteOutput(operator, resultBeforeCalc, calcNumber) {
     outputResult(currentResult, calcDescription); // from vendor file <- in-line comment
 }
 
+function writeToLog(
+    operationIdentifier,
+    prevResult,
+    operationNumber,
+    newResult
+) {
+    const logEntry = {
+        operation: operationIdentifier,
+        prevResult: prevResult,
+        number: operationNumber,
+        result: newResult
+    };
+    logEntries.push(logEntry);
+    console.log(logEntries);
+}
+
 function add() {
     const enteredNumber = getUserNumberInput(); //parseInt(userInput.value);
     const initialResult = currentResult;
     //const calcDescription = `${currentResult} + ${enteredNumber}` //`과 $를 사용 -> 암묵적으로 toString을 실행하는 것
     currentResult += enteredNumber; //현재는 userInput.value는 변수형이 string 상태
     createAndWriteOutput('+', initialResult, enteredNumber);
+    writeToLog('ADD', initialResult, enteredNumber, currentResult);
+    /*
     const logEntry = {
         operation: 'ADD',
         prevResult: initialResult,
@@ -38,7 +56,7 @@ function add() {
     //logEntries.push(enteredNumber);
     console.log(logEntries.operation); //객체 데이터는 .으로 접근할 수 있다.
     console.log(logEntries); //웹 콘솔에서 logEntries(Array)를 확인하겠다.(직접 관찰하겠다.)
-    //console.log(logEntries[0]); -> index로 배열 접근하여 값 확인
+    //console.log(logEntries[0]); -> index로 배열 접근하여 값 확인 */
 } // 전역변수만 조작하는 함수는 무언가를 return하기 시작하면 코드가 더더욱 복잡해진다.
 
 function subtract() {
@@ -46,6 +64,7 @@ function subtract() {
     const initialResult = currentResult; 
     currentResult -= enteredNumber; 
     createAndWriteOutput('-', initialResult, enteredNumber);
+    writeToLog('SUBTRACT', initialResult, enteredNumber, currentResult);
 }
 
 function multiply() {
@@ -53,6 +72,7 @@ function multiply() {
     const initialResult = currentResult; 
     currentResult *= enteredNumber; 
     createAndWriteOutput('*', initialResult, enteredNumber);
+    writeToLog('MULTIPLY', initialResult, enteredNumber, currentResult);
 }
 
 function divide() {
@@ -60,6 +80,7 @@ function divide() {
     const initialResult = currentResult; 
     currentResult /= enteredNumber; 
     createAndWriteOutput('/', initialResult, enteredNumber);
+    writeToLog('DIVIDE', initialResult, enteredNumber, currentResult);
 }
 addBtn.addEventListener('click',add);
 subtractBtn.addEventListener('click',subtract);
