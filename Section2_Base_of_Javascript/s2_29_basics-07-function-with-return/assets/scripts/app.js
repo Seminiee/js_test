@@ -35,7 +35,8 @@ function add() {
         result: currentResult
     }; //빈 객체는 전혀 유용하지 않다 -> key-value 쌍으로 값 추가
     logEntries.push(logEntry);
-    //logEntries.push(enteredNumber); 
+    //logEntries.push(enteredNumber);
+    console.log(logEntries.operation); //객체 데이터는 .으로 접근할 수 있다.
     console.log(logEntries); //웹 콘솔에서 logEntries(Array)를 확인하겠다.(직접 관찰하겠다.)
     //console.log(logEntries[0]); -> index로 배열 접근하여 값 확인
 } // 전역변수만 조작하는 함수는 무언가를 return하기 시작하면 코드가 더더욱 복잡해진다.
