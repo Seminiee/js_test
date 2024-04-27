@@ -28,7 +28,14 @@ function add() {
     //const calcDescription = `${currentResult} + ${enteredNumber}` //`과 $를 사용 -> 암묵적으로 toString을 실행하는 것
     currentResult += enteredNumber; //현재는 userInput.value는 변수형이 string 상태
     createAndWriteOutput('+', initialResult, enteredNumber);
-    logEntries.push(enteredNumber);
+    const logEntry = {
+        operation: 'ADD',
+        prevResult: initialResult,
+        number: enteredNumber,
+        result: currentResult
+    }; //빈 객체는 전혀 유용하지 않다 -> key-value 쌍으로 값 추가
+    logEntries.push(logEntry);
+    //logEntries.push(enteredNumber); 
     console.log(logEntries); //웹 콘솔에서 logEntries(Array)를 확인하겠다.(직접 관찰하겠다.)
     //console.log(logEntries[0]); -> index로 배열 접근하여 값 확인
 } // 전역변수만 조작하는 함수는 무언가를 return하기 시작하면 코드가 더더욱 복잡해진다.
