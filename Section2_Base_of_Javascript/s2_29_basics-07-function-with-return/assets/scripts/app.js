@@ -1,5 +1,6 @@
 const defaultResult = 0;
 let currentResult = defaultResult;
+let logEntries = []; //Array
 //let currentResult = 0;  // javascript에서 세미콜른은 보통 옵션, 해당 강의 에서는 ;사용 권장
 
 /*
@@ -12,7 +13,7 @@ currentResult = add(1, 2); //중괄호로 여러줄 있는 코드(ex. 함수 정
 // This is a function that extracts the user input from the input field. (too long)
 // Gets input from input field.
 function getUserNumberInput() {
-    return parseInt(usrInput.value);
+    return parseInt(userInput.value);
 }
 
 // Generates adnd writes calculation log
@@ -26,7 +27,10 @@ function add() {
     const initialResult = currentResult;
     //const calcDescription = `${currentResult} + ${enteredNumber}` //`과 $를 사용 -> 암묵적으로 toString을 실행하는 것
     currentResult += enteredNumber; //현재는 userInput.value는 변수형이 string 상태
-    createAndWriteOutput('+', initialResult, enteredNumber)
+    createAndWriteOutput('+', initialResult, enteredNumber);
+    logEntries.push(enteredNumber);
+    console.log(logEntries); //웹 콘솔에서 logEntries(Array)를 확인하겠다.(직접 관찰하겠다.)
+    //console.log(logEntries[0]); -> index로 배열 접근하여 값 확인
 } // 전역변수만 조작하는 함수는 무언가를 return하기 시작하면 코드가 더더욱 복잡해진다.
 
 function subtract() {
