@@ -16,6 +16,8 @@ Udemy js 강의 일자별 로그
 ## 2024년 4월 27일(토)
 
 - Section2 43 (배열 사용하기)
-- Section2 44 (객체 생성하기) - 45.객체 - 공통 구문 포착은 Notion에 저장
+- Section2 44 (객체 생성하기) 
+- Section2 45 (객체 - 공통 구문 포착) -> Notion에 저장
 - Section2 46 (객체 데이터에 액세스하기)
 - Section2 47 (객체를 사용하는 재사용 가능한 함수 추가하기)
+- Section2 48 (undefined, null & NaN) -> 코드 수정X, Notion에 개념 내용 저장
