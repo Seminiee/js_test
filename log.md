@@ -24,3 +24,4 @@ Udemy js 강의 일자별 로그
 - Section2 49 ("Typeof" 연산자)
 - Section2 50 ("defer" & "async"를 이용해 스크립트 올바르게 임포트하기)
 - Section2 51 (JavaScript 임포트하기 - 요약) -> 코드 수정X, PDF 파일로 Notion에 저장
+- Section2 52 (마무리)
