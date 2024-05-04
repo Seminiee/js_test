@@ -1,3 +1,5 @@
+//현재 코드의 중복이(덧셈, 뺄셈, 곱셈, 나누셈 함수) 매우 많은 상황 -> 조건문을 사용하여 중복을 줄일 수 있다.
+
 const defaultResult = 0;
 let currentResult = defaultResult;
 let logEntries = [];
@@ -29,20 +31,29 @@ function writeToLog(
   console.log(logEntries);
 }
 
-function add() {
+function calculateResult(calculationType) {
   const enteredNumber = getUserNumberInput();
   const initialResult = currentResult;
+  let mathOperator;
+  if (calculationType == 'ADD') {
+    currentResult += enteredNumber;
+    mathOperator = '+';
+  } else {
+    currentResult -= enteredNumber;
+    mathOperator = '-';
+  }
   currentResult += enteredNumber;
-  createAndWriteOutput('+', initialResult, enteredNumber);
-  writeToLog('ADD', initialResult, enteredNumber, currentResult);
+  createAndWriteOutput(mathOperator, initialResult, enteredNumber);
+  writeToLog(calculationType, initialResult, enteredNumber, currentResult);
+}
+
+
+function add() {
+  calculateResult('ADD')
 }
 
 function subtract() {
-  const enteredNumber = getUserNumberInput();
-  const initialResult = currentResult;
-  currentResult -= enteredNumber;
-  createAndWriteOutput('-', initialResult, enteredNumber);
-  writeToLog('SUBTRACT', initialResult, enteredNumber, currentResult);
+  calculateResult('SUBTRACT')
 }
 
 function multiply() {
