@@ -31,3 +31,4 @@ Udemy js 강의 일자별 로그
 ### 2024년 5월 4일(토)
 
 - Section 4 76 ("if"문 사용하기)
+- Section 4 77 ("if", "else", "else-if"로 작업하기)
