@@ -32,3 +32,4 @@ Udemy js 강의 일자별 로그
 
 - Section 4 76 ("if"문 사용하기)
 - Section 4 77 ("if", "else", "else-if"로 작업하기)
+- Section 4 78 (등식에서 객체 & 배열을 비교할 때 주의할 점!) -> 코드 수정 없이 PDF로 강의
