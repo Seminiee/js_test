@@ -34,3 +34,7 @@ Udemy js 강의 일자별 로그
 - Section 4 77 ("if", "else", "else-if"로 작업하기)
 - Section 4 78 (등식에서 객체 & 배열을 비교할 때 주의할 점!) -> 코드 수정 없이 PDF로 강의
 - Section 4 79 (논리적인 AND와 OR 연산자)
+
+### 2024년 5월 6일(화)
+
+- Section 4 80 (연산자 우선 순위 이해하기)
