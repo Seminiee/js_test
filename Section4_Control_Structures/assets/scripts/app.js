@@ -36,7 +36,8 @@ function calculateResult(calculationType) {
     calculationType !== 'ADD' &&
     calculationType !== 'SUBTRACT' &&
     calculationType !== 'MULTIPLY' &&
-    calculationType !== 'DIVIDE'
+    calculationType !== 'DIVIDE' ||
+    !enteredNumber // enteredNumber === 0 과 동일한 기능
   ) {
     return;
   }
