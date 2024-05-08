@@ -35,7 +35,13 @@ Udemy js 강의 일자별 로그
 - Section 4 78 (등식에서 객체 & 배열을 비교할 때 주의할 점!) -> 코드 수정 없이 PDF로 강의
 - Section 4 79 (논리적인 AND와 OR 연산자)
 
-### 2024년 5월 6일(화)
+### 2024년 5월 6일(월)
 
 - Section 4 80 (연산자 우선 순위 이해하기) -> 코드 수정 없이 PDF로 강의
 - Section 4 81 (True/false를 넘어서: "사실 같은", "거짓 같은"값들)
+- Section 4 82 (Coercion vs Conversion) -> 영상X, Obsidian에 정리 완료
+
+### 2024년 5월 8일(수)
+**폴더 이름 수정 및 2번째 실습코드(monster-killer) 다운로드**
+
+- Section 4 83 (더 큰 규모의 예시 프로젝트 설정하기("Monster Killer))
