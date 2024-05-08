@@ -46,3 +46,4 @@ Udemy js 강의 일자별 로그
 
 - Section 4 83 (더 큰 규모의 예시 프로젝트 설정하기("Monster Killer))
 - Section 4 84 ("공격" 함수 추가하기)
+- Section 4 85 ("if" 문장을 이용해 승리 조건 확인하기)
