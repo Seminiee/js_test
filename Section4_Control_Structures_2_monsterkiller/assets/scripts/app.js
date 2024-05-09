@@ -8,7 +8,17 @@ const STRONG_ATTACK_VALUE = 17;
 const MONSTER_ATTACK_VALUE = 14;
 const HEAL_VALUE = 20;
 
-let chosenMaxLife = 100; //나중에는 유저가 정하기 때문에 변수로 설정함
+const MODE_ATTACK = 'ATTACK'; // MODE_ATTACK = 0
+const MODE_STRONG_ATTACK = 'STRONG_ATTACK'; // MODE_STRONG_ATTACK = 1
+
+const enteredValue = prompt('Maximum life for you and the monster.', '100'); //브라우저의 javascript 내장함수 prompt()
+
+let chosenMaxLife = parseInt(enteredValue); //유저가 MaxLife 직접 설정
+
+if (isNaN(chosenMaxLife) || chosenMaxLife <= 0 ) { //OR연산자는 첫 번째 condition이 참이면 뒤의 Condition은 계산 X
+    chosenMaxLife = 100;
+}
+
 let currentMonsterHealth = chosenMaxLife;
 let currentPlayerHealth = chosenMaxLife;
 let hasBonusLife = true; // Boolean Variable Naming -> isLoggedIn ... 등
@@ -46,11 +56,12 @@ function endRound() {
     }
 }
 
-function attackMonster(mode) { //EventHandler에 직접적으로 연결되는 함수가 아니기 때문에 Handler는 붙이지 않음.
+function attackMonster(mode) { //EventHandler에 직접적으로 연결되는 함수가 아니기 때문에 Handler는 붙이지 않음 
     let maxDamage;
-    if (mode === "ATTACK") {
+    //if (mode === "ATTACK") ,else if (mode === "STRONG_ATTACK")
+    if (mode == MODE_ATTACK) {
         maxDamage = ATTACK_VALUE;
-    } else if (mode === "STRONG_ATTACK") {
+    } else if (mode === MODE_STRONG_ATTACK) {
         maxDamage = STRONG_ATTACK_VALUE;
     }
     const damage = dealMonsterDamage(maxDamage);
@@ -60,7 +71,8 @@ function attackMonster(mode) { //EventHandler에 직접적으로 연결되는 �
 }
 
 function attackHandler() { //어떤 함수가 EventListner 함수에 영향을 주는지(EventListner를 가리키는지) 확인하는 명명규칙 ~Handler()
-    attackMonster('ATTACK');
+    attackMonster('ATTACK'); 
+    //문자열 식별자는 코드에서 피하는 것이 좋다 -> 문자열 하나의 오류만으로도 시스템 전체 에러 발생의 가능성 때문 + 변수로 설정 시 IDE에서 자동완성 기능도 사용가능
 }
 function strongAttackHandler() {
     attackMonster('STRONG_ATTACK');
