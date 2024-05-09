@@ -11,16 +11,38 @@ const HEAL_VALUE = 20;
 let chosenMaxLife = 100; //나중에는 유저가 정하기 때문에 변수로 설정함
 let currentMonsterHealth = chosenMaxLife;
 let currentPlayerHealth = chosenMaxLife;
+let hasBonusLife = true; // Boolean Variable Naming -> isLoggedIn ... 등
 
 adjustHealthBars(chosenMaxLife);
 
+function reset() {
+    currentMonsterHealth = chosenMaxLife;
+    currentPlayerHealth = chosenMaxLife;
+    resetGame(chosenMaxLife);
+}
+
 function endRound() {
+    const initialPlayerHealth = currentPlayerHealth;
+    const playerDamage = dealPlayerDamage(MONSTER_ATTACK_VALUE);
+    currentPlayerHealth -= playerDamage;
+
+    if (currentPlayerHealth <=0 && hasBonusLife) {
+        hasBonusLife = false;
+        removeBonusLife();
+        currentPlayerHealth = initialPlayerHealth;
+        setPlayerHealth(initialPlayerHealth);
+        alert('You would be dead but the bonus life saved you!'); 
+    }
     if (currentMonsterHealth <= 0 && currentPlayerHealth > 0) {
         alert('You won!');
     } else if (currentPlayerHealth <= 0 && currentMonsterHealth > 0) {
         alert('You lost!');
     } else if (currentPlayerHealth <= 0 && currentMonsterHealth <= 0) {
         alert('You have a draw!');
+    }
+
+    if (currentMonsterHealth <= 0 || currentPlayerHealth <= 0) {
+        reset();
     }
 }
 
@@ -33,8 +55,7 @@ function attackMonster(mode) { //EventHandler에 직접적으로 연결되는 �
     }
     const damage = dealMonsterDamage(maxDamage);
     currentMonsterHealth -= damage;
-    const playerDamage = dealPlayerDamage(MONSTER_ATTACK_VALUE);
-    currentPlayerHealth -= playerDamage;
+    
     endRound();
 }
 

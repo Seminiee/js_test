@@ -54,3 +54,5 @@ Udemy js 강의 일자별 로그
     -  -> 중복 코드 부분(attackHandler, strongAttackHandler)을 함수로 작성하여 코드 재사용(중복 회피)
 - Section 4 87 ("힐러" 기능을 추가할 시간!)
     - 중복 코드 부분을 endRound함수로 작성하여 코드 재사용
+- Section 4 88 (조건적인 보너스 생명 제어하기(불리언 연산자 사용하지 않음!))
+- Section 4 89 ("게임 리셋" 기능 추가하기)
