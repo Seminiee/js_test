@@ -133,16 +133,23 @@ function endRound() {
 }
 
 function attackMonster(mode) { //EventHandler에 직접적으로 연결되는 함수가 아니기 때문에 Handler는 붙이지 않음 
-    let maxDamage;
-    let logEvent;
+    // 코드가 길 때는 명시적으로 if문 사용하는 것이 좋다.
+    const maxDamage = mode === MODE_ATTACK ? ATTACK_VALUE : STRONG_ATTACK_VALUE;
+    const logEvent = 
+        mode === MODE_ATTACK
+            ? LOG_EVENT_PLAYER_ATTACK
+            : LOG_EVENT_PLAYER_STRONG_ATTACK;
     //if (mode === "ATTACK") ,else if (mode === "STRONG_ATTACK")
+    
+    /*
     if (mode == MODE_ATTACK) {
         maxDamage = ATTACK_VALUE;
         logEvent = LOG_EVENT_PLAYER_ATTACK;
     } else if (mode === MODE_STRONG_ATTACK) {
         maxDamage = STRONG_ATTACK_VALUE;
         logEvent = LOG_EVENT_PLAYER_STRONG_ATTACK;
-    }
+    } 
+    */
     const damage = dealMonsterDamage(maxDamage);
     currentMonsterHealth -= damage;
     writeToLog (

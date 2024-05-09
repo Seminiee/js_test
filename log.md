@@ -47,7 +47,7 @@ Udemy js 강의 일자별 로그
 ### 2024년 5월 8일(수)
 **폴더 이름 수정 및 2번째 실습코드(monster-killer) 다운로드**
 
-- Section 4 83 (더 큰 규모의 예시 프로젝트 설정하기("Monster Killer))
+- Section 4 83 (더 큰 규모의 예시 프로젝트 설정하기("Monster Killer"))
 - Section 4 84 ("공격" 함수 추가하기)
 - Section 4 85 ("if" 문장을 이용해 승리 조건 확인하기)
 - Section 4 86 ("if" 문장 & "더 강한 공격" 기능 더 많이 추가하기) 
@@ -59,3 +59,4 @@ Udemy js 강의 일자별 로그
 - Section 4 90 (사용자 입력 검증하기)
 - Section 4 91 (조건적 코드에서 전역 상수 식별자로 활용하기)
 - Section 4 92 (조건적 배틀 로그 추가하기)
+- Section 4 93 (삼차 연산자의 소개)
