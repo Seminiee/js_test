@@ -62,3 +62,22 @@ Udemy js 강의 일자별 로그
 - Section 4 93 (삼차 연산자의 소개)
 - Section 4 94 (이론: 문장 vs 표현식)
     - -> 코드 수정 없이 PDF로 강의
+- Section 4 95 (논리적 연산자 "팁" & 축약어)
+- Section 4 96 (논리적 연산자 - 요약)
+- Section 4 퀴즈 8: (논리적 연산자 & 원리)
+- Section 4 97 ("스위치-케이스" 문장으로 작업하기)
+- Section 4 98 (반복문 소개)
+- Section 4 99 ("For" 반복문)
+- Section 4 100 ("For-of" 반복문) -> 배열에
+- Section 4 101 ("For-in" 반복문) -> 객체에
+- Section 4 102 ("While" & "do-while" 반복문)
+- Section 4 퀴즈 9: (반복문 - 기초)
+- Section 4 103 ("Break"로 반복문 제어하기)
+- Section 4 104 ("continue"로 반복 제어하기)
+- Section 4 105 ("레이블 문장으로 더욱 제어하기")
+- Section 4 퀴즈 10: (Break & continue)
+- Section 4 106 ("Try-catch"로 오류 처리하기 - 소개)
+- Section 4 107 (사용자 정의 오류 발생시키기)
+- Section 4 108 ("Try-catch"를 사용해 오류를 잡고 & 처리하기)
+- Section 4 퀴즈 11: (Error Handling)
+- Section 4 109 (Section 4 마무리)
