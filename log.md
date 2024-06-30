@@ -81,3 +81,13 @@ Udemy js 강의 일자별 로그
 - Section 4 108 ("Try-catch"를 사용해 오류를 잡고 & 처리하기)
 - Section 4 퀴즈 11: (Error Handling)
 - Section 4 109 (Section 4 마무리)
+
+## <Section6 - 함수 더 보기>
+### 2024년 6월 30일(일)
+**Section 6 함수 더 보기 강의 자료 다운로드 및 폴더이름 변경**
+***
+- Section 6 123 (모듈 소개)
+- Section 6 124 (함수 지식 복습 - 이때까지 배운 내용들)
+- Section 6 125 (Parameters vs Arguments)
+- Section 6 126 (함수 vs 메서드)
+- Section 6 127 (함수는 객체다!)
