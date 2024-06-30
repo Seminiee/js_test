@@ -92,3 +92,4 @@ Udemy js 강의 일자별 로그
 - Section 6 126 (함수 vs 메서드)
 - Section 6 127 (함수는 객체다!)
 - Section 6 128 (함수 표현식: 변수에 함수 저장하기)
+- Section 6 129 (함수 표현식 vs 함수 선언) PDF
