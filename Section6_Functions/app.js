@@ -72,7 +72,7 @@ const getWinner = (cChoice, pChoice) =>
 
 // console.log(person.name);
 
-startGameBtn.addEventListener('click',function startGame(){
+startGameBtn.addEventListener('click',() => {
     if (gameIsRunning) {
         return;
     }
@@ -82,5 +82,15 @@ startGameBtn.addEventListener('click',function startGame(){
     const computerChoice = getComputerChoice();
     const winner = getWinner(computerChoice,playerChoice);
     console.log(winner);
+    let message = `You picked ${playerChoice}, computer picked ${computerChoice}, therefore you `;
+    if (winner === RESULT_DRAW) {
+        message += 'had a draw.';
+    } else if (winner === RESULT_PLAYER_WINS) {
+        message += 'won. ';
+    } else {
+        message += 'lost. '
+    } 
+    alert(message);
+    gameIsRunning = false;
 }); //indirect execution
 // 익명 함수에 이름을 지정하면 디버깅할 때 훨씬 편리하다.
