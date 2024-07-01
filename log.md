@@ -113,3 +113,5 @@ Udemy js 강의 일자별 로그
 - Section 6 142 (`call()`과 `apply()`) -> 나중에 학습 예정
 - Section 6 143 (마무리)
 - Section 6 144 (유용한 참고 자료 & 링크)
+    - [함수에 대한 추가 정보(MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
+    - [`bind()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)
