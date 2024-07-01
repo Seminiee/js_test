@@ -115,3 +115,7 @@ Udemy js 강의 일자별 로그
 - Section 6 144 (유용한 참고 자료 & 링크)
     - [함수에 대한 추가 정보(MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
     - [`bind()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)
+
+## <Section8 - 배열 & 반복 더 보기>
+### 2024년 7월 1일(월)
+- Section 8 184("반복(Iterable)"과 "유사 배열 객체(Array-like)"란 무엇인가?)
