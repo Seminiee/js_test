@@ -18,7 +18,7 @@ const getPlayerChoice =  () => {
         selection !== SCISSORS
     ) {
         alert(`Invalid choice! We chose ${DEFAULT_USER_CHOICE} for you!`);
-        return;// DEFAULT_USER_CHOICE;
+        return;// return undefined
     }
     return selection;
 }
@@ -35,7 +35,7 @@ const getComputerChoice = () => {
 }
 
 //const getWinner = function (cChoice, pChoice) {
-const getWinner = (cChoice, pChoice = DEFAULT_USER_CHOICE) => 
+const getWinner = (cChoice, pChoice = DEFAULT_USER_CHOICE) => // javascript는 누락된 인수의 값을 undefined로 변환해서 함수를 실행한다., 기본 인수를 갖는 매개변수는 뒤쪽에 와야 함.
     cChoice === pChoice 
         ? RESULT_DRAW 
         :   (cChoice === ROCK && pChoice === PAPER) || 

@@ -101,3 +101,7 @@ Udemy js 강의 일자별 로그
 - Section 6 퀴즈 13: 함수 생성하기 
 - Section 6 135 (사용자에게 메시지 출력하기)
 - Section 6 136 (함수 내의 기본 인자)
+
+### 2024년 7월 1일(월)
+***
+- Section 6 137 (Rest 매개변수 소개("Rest 연산자")) -> `./RestoperatorJS.ipynb`
