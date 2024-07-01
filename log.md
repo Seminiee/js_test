@@ -110,4 +110,6 @@ Udemy js 강의 일자별 로그
 - Section 6 140 ("bind()"로 작업하기) -> `./RestOperatorJS.ipynb`
 - Section 6 퀴즈 14: 함수 - 심화 내용
 - Section 6 141 (계산기 포르젝트에 bind() 추가하기) -> Section2 계산기 프로그램 app.js
-- Section 6 142 (`call()`과 `apply()`)
+- Section 6 142 (`call()`과 `apply()`) -> 나중에 학습 예정
+- Section 6 143 (마무리)
+- Section 6 144 (유용한 참고 자료 & 링크)
