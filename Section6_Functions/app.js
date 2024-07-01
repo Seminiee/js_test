@@ -72,6 +72,7 @@ const getWinner = (cChoice, pChoice = DEFAULT_USER_CHOICE) => // javascript는 �
 
 // console.log(person.name);
 
+//콜백 함수: 무언가에 의해 불러와지기 때문에, 함수를 원하는 시점에 실행할 수 있는게 아니라, 함수나 포인터를 실행하도록 권한을 넘김(함수를 인자에 대한 값으로 취급)
 startGameBtn.addEventListener('click',() => {
     if (gameIsRunning) {
         return;

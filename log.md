@@ -105,4 +105,5 @@ Udemy js 강의 일자별 로그
 ### 2024년 7월 1일(월)
 ***
 - Section 6 137 (Rest 매개변수 소개("Rest 연산자")) -> `./RestOperatorJS.ipynb`
-- Section 6 138 (함수 내에서 함수 생성하기)
+- Section 6 138 (함수 내에서 함수 생성하기) -> `./RestOperatorJS.ipynb`
+- Section 6 139 (콜백 함수 이해하기)
