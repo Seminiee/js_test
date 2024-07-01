@@ -118,4 +118,6 @@ Udemy js 강의 일자별 로그
 
 ## <Section8 - 배열 & 반복 더 보기>
 ### 2024년 7월 1일(월)
-- Section 8 184("반복(Iterable)"과 "유사 배열 객체(Array-like)"란 무엇인가?)
+- Section 8 184 ("반복(Iterable)"과 "유사 배열 객체(Array-like)"란 무엇인가?)
+**Section 8 배열 & 반복 더보기 강의 자료 다운로드 및 폴더 이름 변경**
+- Section 8 185 (배열 생성하기)
