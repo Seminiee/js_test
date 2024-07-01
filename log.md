@@ -107,3 +107,6 @@ Udemy js 강의 일자별 로그
 - Section 6 137 (Rest 매개변수 소개("Rest 연산자")) -> `./RestOperatorJS.ipynb`
 - Section 6 138 (함수 내에서 함수 생성하기) -> `./RestOperatorJS.ipynb`
 - Section 6 139 (콜백 함수 이해하기)
+- Section 6 140 ("bind()"로 작업하기) -> `./RestOperatorJS.ipynb`
+- Section 6 퀴즈 14: 함수 - 심화 내용
+- Section 6 141 계산기 포르젝트에 bind() 추가하기
