@@ -132,3 +132,14 @@ const filteredArray = prices.filter(price => price > 6);
 // 화살표 함수는 코드를 더 줄일 수 있다.
 
 console.log(filteredArray);
+
+//1번째, 2번째 인자가 매우 중요하다.
+// const sum = prices.reduce((prevValue, curValue, curIndex, prices) => {
+
+// }, 0); // 시작하려는 초깃값;
+// const sum = prices.reduce((prevValue, curValue, curIndex, prices) => {
+//     return prevValue + curValue;
+// }, 0);
+const sum = prices.reduce((prevValue, curValue) => prevValue + curValue, 0);
+
+console.log(sum);
