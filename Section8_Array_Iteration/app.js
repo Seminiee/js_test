@@ -48,11 +48,19 @@
 // const removedElements = hobbies.splice(-2, 1);
 // console.log(hobbies);
 
+// const testResults = [1, 5.3, 1.5, 10.99, -5, 10];
+
+// console.log(testResults.slice()) // return new array -> good way to copy the array
+// // const storedResults = testResults; // 두 포인터는 동일한 배열을 참조한
+// const storedResults = testResults.slice(0,2); // [1, 5.3]
+
+// testResults.push(5.91);
+// console.log(storedResults, testResults);
+
 const testResults = [1, 5.3, 1.5, 10.99, -5, 10];
 
-console.log(testResults.slice()) // return new array -> good way to copy the array
-// const storedResults = testResults; // 두 포인터는 동일한 배열을 참조한
-const storedResults = testResults.slice(0,2); // [1, 5.3]
+const storedResults = testResults.concat([3,99, 2]);
 
 testResults.push(5.91);
+
 console.log(storedResults, testResults);

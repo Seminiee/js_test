@@ -125,3 +125,4 @@ Udemy js 강의 일자별 로그
 - Section 8 187 (`push()`, `pop()`, `unshift()`, `shift()` - 요소 추가 & 제거하기)
 - Section 8 188 (`splice()` 메서드)
 - Section 8 189 (범위 선택하기 & `slice()`로 복제 생성하기)
+- Section 8 190 (`concat()`으로 배열에 배열 추가하기)
