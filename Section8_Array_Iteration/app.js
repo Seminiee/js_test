@@ -15,3 +15,14 @@ console.log(newArray);
 
 const arrayListItems = Array.from(listItems);
 console.log(arrayListItems);
+
+const hobbies = ['Cooking', 'Sports'];
+const personalData = [30, 'Max', {moreDetail: []}]; // 여러 자료구조를 가질 수 있다.
+
+const analyticsData = [[1, 1.6], [-5.4, 2.1]]; //다차원 배열
+
+for (const data of analyticsData) {
+    for(const dataPoint of data) {
+        console.log(dataPoint);
+    }
+}
