@@ -57,33 +57,45 @@
 // testResults.push(5.91);
 // console.log(storedResults, testResults);
 
-const testResults = [1, 5.3, 1.5, 10.99, 1.5,  -5, 10];
+// const testResults = [1, 5.3, 1.5, 10.99, 1.5,  -5, 10];
 
-const storedResults = testResults.concat([3,99, 2]);
+// const storedResults = testResults.concat([3,99, 2]);
 
-testResults.push(5.91);
+// testResults.push(5.91);
 
-console.log(storedResults, testResults);
-console.log(testResults.indexOf(1.5)); // find only first index , left to right
-console.log(testResults.lastIndexOf(1.5)); // right to left
+// console.log(storedResults, testResults);
+// console.log(testResults.indexOf(1.5)); // find only first index , left to right
+// console.log(testResults.lastIndexOf(1.5)); // right to left
 
-console.log(testResults.includes(10.99));
-// indexOf(), lastIndexOf() -> 원시 값에게만 작동, 참조 값은 작동X(-1 반납)
+// console.log(testResults.includes(10.99));
+// // indexOf(), lastIndexOf() -> 원시 값에게만 작동, 참조 값은 작동X(-1 반납)
 
-const personData = [{name: 'Max'}, {name: 'Manuel'}];
-// console.log(personData.indexOf({name: 'Max'})); // return -1
+// const personData = [{name: 'Max'}, {name: 'Manuel'}];
+// // console.log(personData.indexOf({name: 'Max'})); // return -1
 
-const manuel = personData.find((person, idx, persons) => {
-    return person.name === 'Manuel';
-}); // find()는 복사를 생성하지 않는다.
-manuel.name = 'Anna';
+// const manuel = personData.find((person, idx, persons) => {
+//     return person.name === 'Manuel';
+// }); // find()는 복사를 생성하지 않는다.
+// manuel.name = 'Anna';
 
 
-console.log(manuel, personData);
-// console.log(personData.find({name: 'Max'}));
+// console.log(manuel, personData);
+// // console.log(personData.find({name: 'Max'}));
 
-const maxIndex = personData.findIndex((person, idx, persons) => {
-    return person.name === 'Max';
+// const maxIndex = personData.findIndex((person, idx, persons) => {
+//     return person.name === 'Max';
+// });
+
+// console.log(maxIndex);
+
+const prices = [10.99, 5.99, 3.99, 6.59];
+const tax = 0.19;
+const taxAdjustedPrices = [];
+
+// 
+prices.forEach((price, idx, prices) => {
+    const priceObj = {index: idx, taxAdjustedPrices: price * (1 + tax)};
+    taxAdjustedPrices.push(priceObj);
 });
 
-console.log(maxIndex);
+console.log(taxAdjustedPrices);
