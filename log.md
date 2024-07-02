@@ -128,3 +128,4 @@ Udemy js 강의 일자별 로그
 - Section 8 190 (`concat()`으로 배열에 배열 추가하기)
 - Section 8 191 (`indexOf()` / & `lastIndexOf()`로 인덱스 회수하기)
 - Section 8 192 (탐색: `find()`와 `findIndex()`)
+- Section 8 193 (이것도 포함되어 있을까?)

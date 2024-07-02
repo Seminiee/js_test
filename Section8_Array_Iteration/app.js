@@ -66,6 +66,8 @@ testResults.push(5.91);
 console.log(storedResults, testResults);
 console.log(testResults.indexOf(1.5)); // find only first index , left to right
 console.log(testResults.lastIndexOf(1.5)); // right to left
+
+console.log(testResults.includes(10.99));
 // indexOf(), lastIndexOf() -> 원시 값에게만 작동, 참조 값은 작동X(-1 반납)
 
 const personData = [{name: 'Max'}, {name: 'Manuel'}];
