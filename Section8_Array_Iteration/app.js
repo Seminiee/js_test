@@ -90,12 +90,18 @@
 
 const prices = [10.99, 5.99, 3.99, 6.59];
 const tax = 0.19;
-const taxAdjustedPrices = [];
+// const taxAdjustedPrices = [];
 
 // 
-prices.forEach((price, idx, prices) => {
+// prices.forEach((price, idx, prices) => {
+//     const priceObj = {index: idx, taxAdjustedPrices: price * (1 + tax)};
+//     taxAdjustedPrices.push(priceObj);
+// });
+
+const taxAdjustedPrices = prices.map((price, idx, prices) => {
     const priceObj = {index: idx, taxAdjustedPrices: price * (1 + tax)};
-    taxAdjustedPrices.push(priceObj);
-});
+    return priceObj;
+}); // map() 메서드는 배열의 각 요소에 관해 전환 가능한 새 요소를 return해야 한다. 기존 배열은 그대로, 새로운 배열을 반환
+// 매우 유용한 메서드. -> element를 변경하기 쉽고, 변경된 element를 기반으로 새로운 배열을 얻기도 매우 쉽기 때문.
 
 console.log(taxAdjustedPrices);

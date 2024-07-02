@@ -130,3 +130,4 @@ Udemy js 강의 일자별 로그
 - Section 8 192 (탐색: `find()`와 `findIndex()`)
 - Section 8 193 (이것도 포함되어 있을까?)
 - Section 8 194 (반복문 대안: `forEach()` 메서드)
+- Section 8 195 (`map()`으로 데이터 변환하기)
