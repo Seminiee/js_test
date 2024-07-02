@@ -124,3 +124,4 @@ Udemy js 강의 일자별 로그
 - Section 8 186 (배열에는 어떤 데이터를 저장할 수 있을까?)
 - Section 8 187 (`push()`, `pop()`, `unshift()`, `shift()` - 요소 추가 & 제거하기)
 - Section 8 188 (`splice()` 메서드)
+- Section 8 189 (범위 선택하기 & `slice()`로 복제 생성하기)
