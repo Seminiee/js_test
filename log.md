@@ -132,3 +132,4 @@ Udemy js 강의 일자별 로그
 - Section 8 194 (반복문 대안: `forEach()` 메서드)
 - Section 8 195 (`map()`으로 데이터 변환하기)
 - Section 8 196 (`sort()`ing과 `reverse()`ing)
+- Section 8 197 (`filter()`로 배열 필터링하기)
