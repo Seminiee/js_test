@@ -122,8 +122,13 @@ const sortedPrices = prices.sort((a,b) => {
 console.log(sortedPrices); 
 console.log(sortedPrices.reverse()); // sort() 논리만 수정하면 내림차순도 가능하고 성능도 더 좋음
 
-const filteredArray = prices.filter((price, index, prices) => {
-    return price > 6; // return Boolean value
-}); // 새로운 배열 반환
+
+// const filteredArray = prices.filter((price, index, prices) => {
+//     return price > 6; // return Boolean value
+// }); // 새로운 배열 반환
+
+const filteredArray = prices.filter(price => price > 6);
+
+// 화살표 함수는 코드를 더 줄일 수 있다.
 
 console.log(filteredArray);

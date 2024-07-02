@@ -133,3 +133,4 @@ Udemy js 강의 일자별 로그
 - Section 8 195 (`map()`으로 데이터 변환하기)
 - Section 8 196 (`sort()`ing과 `reverse()`ing)
 - Section 8 197 (`filter()`로 배열 필터링하기)
+- Section 8 198 (화살표 함수의 진가는 여기서 발휘된다!)
