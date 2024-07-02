@@ -105,3 +105,19 @@ const taxAdjustedPrices = prices.map((price, idx, prices) => {
 // 매우 유용한 메서드. -> element를 변경하기 쉽고, 변경된 element를 기반으로 새로운 배열을 얻기도 매우 쉽기 때문.
 
 console.log(taxAdjustedPrices);
+
+// const sortedPrices = prices.sort(); // sort(): 문자열로 변환한 후에 sorting
+const sortedPrices = prices.sort((a,b) => { 
+// sort()는 자체 함수를 가짐 -> 두 개의 숫자를 취하는 비교(compare)함수, 2개의 요소 필요한 경우 이를 기반으로 두 값을 교환하고 다음 쌍으로 이동
+// 두 값 중 하나는 교환돼서 명령줄의 다음 값이 되는 것
+// a>b, a=== b, a < b 입력 가능
+    if(a > b) {
+        return 1; //양수 반환
+    } else if (a === b) {
+        return 0; //0 반환
+    } else {
+        return -1; //음수 반환
+    }
+});
+console.log(sortedPrices); 
+console.log(sortedPrices.reverse()); // sort() 논리만 수정하면 내림차순도 가능하고 성능도 더 좋음
