@@ -35,5 +35,15 @@ hobbies.shift(); // O(n)
 console.log(hobbies);
 
 hobbies[1] ='Coding';
-hobbies[5] = 'Reading'; // rarely used
+// hobbies[5] = 'Reading'; // rarely used
+console.log(hobbies);
+
+
+hobbies.splice(1, 0, 'Good Food'); // only array
+console.log(hobbies);
+
+// hobbies.splice(0, 1);
+// console.log(hobbies);
+
+const removedElements = hobbies.splice(-2, 1);
 console.log(hobbies);
