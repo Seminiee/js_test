@@ -140,3 +140,4 @@ Udemy js 강의 일자별 로그
 - Section 8 202 (분산 연산자 `...`)
 - Section 8 203 (배열 구조 분해 이해하기)
 - Section 8 204 (Maps & Sets - 개요)
+- Section 8 205 (Sets 작업하기) - setsmaps.js 및 index.html 새로 생성
