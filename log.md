@@ -142,3 +142,4 @@ Udemy js 강의 일자별 로그
 - Section 8 204 (Maps & Sets - 개요)
 - Section 8 205 (Sets 작업하기) - setsmaps.js 및 index.html 새로 생성
 - Section 8 206 (Maps 작업하기)
+- Section 8 207 (Maps vs 객체)
