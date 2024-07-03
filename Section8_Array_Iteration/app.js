@@ -175,6 +175,6 @@
 // persons[0].age = 31;
 // console.log(persons, copiedPersons);
 
-const nameData = ['Max', 'Schwarz', 'Mr', 30];
-const [firstName, lastName, ...otherInformation] = nameData; //자바스크립트가 요소를 꺼내서 저장함
-console.log(firstName, lastName, otherInformation);
+// const nameData = ['Max', 'Schwarz', 'Mr', 30];
+// const [firstName, lastName, ...otherInformation] = nameData; //자바스크립트가 요소를 꺼내서 저장함
+// console.log(firstName, lastName, otherInformation);

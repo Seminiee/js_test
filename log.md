@@ -139,3 +139,4 @@ Udemy js 강의 일자별 로그
 - Section 8 201 (배열 & 문자열 - `split()`과 `join()`)
 - Section 8 202 (분산 연산자 `...`)
 - Section 8 203 (배열 구조 분해 이해하기)
+- Section 8 204 (Maps & Sets - 개요)
