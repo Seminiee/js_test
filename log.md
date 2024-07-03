@@ -147,3 +147,11 @@ Udemy js 강의 일자별 로그
 - Section 8 209 (WeakMap 이해하기)
 - Section 8 210 (마무리)
 - Section 8 211 (유용한 참고 자료 & 링크)
+
+## <Section9 - 객체 더보기>
+### 2024년 7월 3일(수)
+**Section 9 객체 더보기 강의 자료 다운로드 및 폴더 이름 변경**
+- Section 9 212 (모듈 소개)
+- Section 9 213 (객체란 무엇인가?)
+- Section 9 214 (객체 & 원시 값)
+- Section 9 215 (객체 - 복습)
