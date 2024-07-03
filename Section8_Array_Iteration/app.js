@@ -119,7 +119,9 @@ const sortedPrices = prices.sort((a,b) => {
         return -1; //음수 반환
     }
 });
+const sortedPrices2 = prices.sort((a,b) => a > b ? 1 : (a === b ? 0 : -1));
 console.log(sortedPrices); 
+console.log('sortedPrices2: ', sortedPrices2);
 console.log(sortedPrices.reverse()); // sort() 논리만 수정하면 내림차순도 가능하고 성능도 더 좋음
 
 
@@ -143,3 +145,13 @@ console.log(filteredArray);
 const sum = prices.reduce((prevValue, curValue) => prevValue + curValue, 0);
 
 console.log(sum);
+
+const data = 'new york;10.99;2000';
+
+const transformedData = data.split(';'  ) // .split() -> 문자열을 조각조각 그리고 배열로 변환
+
+console.log(transformedData);
+
+const nameFragments = ['Max', 'Schwarz'];
+const name = nameFragments.join(' '); // join() 기본 구분자는 `,`
+console.log(name);

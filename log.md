@@ -135,3 +135,5 @@ Udemy js 강의 일자별 로그
 - Section 8 197 (`filter()`로 배열 필터링하기)
 - Section 8 198 (화살표 함수의 진가는 여기서 발휘된다!)
 - Section 8 199 (중요한 `reduce()` 메서드)
+- Section 8 200 (JavaScript에서 메서드 체인 형성하기)
+- Section 8 201 (배열 & 문자열 - `split()`과 `join()`)
