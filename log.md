@@ -137,3 +137,5 @@ Udemy js 강의 일자별 로그
 - Section 8 199 (중요한 `reduce()` 메서드)
 - Section 8 200 (JavaScript에서 메서드 체인 형성하기)
 - Section 8 201 (배열 & 문자열 - `split()`과 `join()`)
+- Section 8 202 (분산 연산자 `...`)
+- Section 8 203 (배열 구조 분해 이해하기)
