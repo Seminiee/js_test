@@ -145,3 +145,5 @@ Udemy js 강의 일자별 로그
 - Section 8 207 (Maps vs 객체)
 - Section 8 208 (WeakSet 이해하기)
 - Section 8 209 (WeakMap 이해하기)
+- Section 8 210 (마무리)
+- Section 8 211 (유용한 참고 자료 & 링크)
