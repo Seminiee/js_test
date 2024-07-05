@@ -1,12 +1,20 @@
+/**
+ * 객체는 키를 스트링으로 자동 변환하여 저장한다.
+ */
+const movieList = document.getElementById('movie-list');
+
+movieList.style['backgroundColor'] = 'red';
+movieList.style.display = 'block';
+
 const person = {
-    name: 'Max',
+    'first name' :'Max',
     age: 30,
     hobbies: ['Sports','Cooking'],
     greet: function() {
         alert('Hi there!');
     }
 };
-
+console.log(person['first name'])
 // ...
 // 프로퍼티가 존재하든 존재하지 않든 추가할 수 있다.
 
