@@ -61,6 +61,25 @@ const searchMovieHandler = () => {
 addMovieBtn.addEventListener('click', addMovieHandler);
 searchBtn.addEventListener('click',searchMovieHandler);
 
+const person = {
+    name : 'Max',
+    age : 31,
+    hobbies : ['Sports','Cooking'],
+};
+
+const person2 = { ...person };
+
+person.hobbies.push('Coding');
+console.log(person2);
+
+const person3 = {...person, age: 29, hobbies : [...person.hobbies]};
+
+console.log(person);
+console.log(person3);
+
+person.hobbies.pop();
+console.log(person);
+console.log(person3);
 
 // 데모 앱 학습 전 객체 학습 코드 주석 처리 **********************************************************************
 
