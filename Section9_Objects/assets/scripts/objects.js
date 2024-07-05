@@ -27,11 +27,12 @@ const renderMovies = (filter = '') => {
          */
         const { info, ...otherProps} = movie; // 순서는 중요하지 않고, 오직 키 이름만 중요함
         console.log(otherProps);
-        const { title: movieTitle } = info; // title에게 movieTitle이라는 새로운 이름을 줬다.
-        let text = movieTitle + ' - ';
+        // const { title: movieTitle } = info; // title에게 movieTitle이라는 새로운 이름을 줬다.
+        // const { getFormattedTitle } = movie;
+        let text = movie.getFormattedTitle() + ' - ';
         for (const key in info) {
             if ( key !== 'title') {
-                text += `${key}: ${movie.info[key]}`;
+                text += `${key}: ${info[key]}`;
             }
         }
         movieEl.textContent = text;
@@ -54,6 +55,9 @@ const addMovieHandler =  () => {
             [extraName]: extraValue 
         },
         id: Math.random().toString(),
+        getFormattedTitle: function () { //메서드는 절-대 Arrow Function으로 작성하지 말 것!
+            return this.info.title.toUpperCase(); // this는 함수의 일부인 객체를 찾도록 명령함
+        }
     };
     movies.push(newMovie);
     renderMovies();
