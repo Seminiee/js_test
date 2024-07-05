@@ -67,7 +67,10 @@ const person = {
     hobbies : ['Sports','Cooking'],
 };
 
-const person2 = { ...person };
+// const person2 = { ...person };
+const person2 = Object.assign({}, person);
+
+person.name = 'Maximilian';
 
 person.hobbies.push('Coding');
 console.log(person2);
