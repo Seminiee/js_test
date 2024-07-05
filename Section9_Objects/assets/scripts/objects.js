@@ -21,8 +21,11 @@ const renderMovies = (filter = '') => {
 
         filteredMovies.forEach((movie) => {
         const movieEl = document.createElement('li');
-        let text = movie.info.title + ' - ';
-        for (const key in movie.info) {
+        const { info, ...otherProps} = movie; // 순서는 중요하지 않고, 오직 키 이름만 중요함
+        console.log(otherProps);
+        const { title: movieTitle } = info; // title에게 movieTitle이라는 새로운 이름을 줬다.
+        let text = movieTitle + ' - ';
+        for (const key in info) {
             if ( key !== 'title') {
                 text += `${key}: ${movie.info[key]}`;
             }
@@ -61,28 +64,28 @@ const searchMovieHandler = () => {
 addMovieBtn.addEventListener('click', addMovieHandler);
 searchBtn.addEventListener('click',searchMovieHandler);
 
-const person = {
-    name : 'Max',
-    age : 31,
-    hobbies : ['Sports','Cooking'],
-};
+// const person = {
+//     name : 'Max',
+//     age : 31,
+//     hobbies : ['Sports','Cooking'],
+// };
 
-// const person2 = { ...person };
-const person2 = Object.assign({}, person);
+// // const person2 = { ...person };
+// const person2 = Object.assign({}, person);
 
-person.name = 'Maximilian';
+// person.name = 'Maximilian';
 
-person.hobbies.push('Coding');
-console.log(person2);
+// person.hobbies.push('Coding');
+// console.log(person2);
 
-const person3 = {...person, age: 29, hobbies : [...person.hobbies]};
+// const person3 = {...person, age: 29, hobbies : [...person.hobbies]};
 
-console.log(person);
-console.log(person3);
+// console.log(person);
+// console.log(person3);
 
-person.hobbies.pop();
-console.log(person);
-console.log(person3);
+// person.hobbies.pop();
+// console.log(person);
+// console.log(person3);
 
 // 데모 앱 학습 전 객체 학습 코드 주석 처리 **********************************************************************
 
