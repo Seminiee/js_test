@@ -21,6 +21,10 @@ const renderMovies = (filter = '') => {
 
         filteredMovies.forEach((movie) => {
         const movieEl = document.createElement('li');
+        /**
+         * if ('info' in movie) {} - in 연산자 사용해서 프로퍼티 존재 확인하기
+         * if(!(movie.info === undefined)) -> undefined 와 같은지 검사 
+         */
         const { info, ...otherProps} = movie; // 순서는 중요하지 않고, 오직 키 이름만 중요함
         console.log(otherProps);
         const { title: movieTitle } = info; // title에게 movieTitle이라는 새로운 이름을 줬다.
