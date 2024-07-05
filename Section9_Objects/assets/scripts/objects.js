@@ -55,7 +55,8 @@ const addMovieHandler =  () => {
             [extraName]: extraValue 
         },
         id: Math.random().toString(),
-        getFormattedTitle: function () { //메서드는 절-대 Arrow Function으로 작성하지 말 것!
+        //getFormattedTitle: function () { //메서드는 절-대 Arrow Function으로 작성하지 말 것!
+        getFormattedtitle() {
             return this.info.title.toUpperCase(); // this는 함수의 일부인 객체를 찾도록 명령함
         }
     };

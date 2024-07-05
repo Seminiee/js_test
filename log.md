@@ -169,3 +169,4 @@ Udemy js 강의 일자별 로그
 - Section 9 227 (객체 구조 분해)
 - Section 9 228 (프로퍼티 존재 확인하기)
 - Section 9 229 (`this` 소개)
+- Section 9 230 (메서드 축약어 구문)
