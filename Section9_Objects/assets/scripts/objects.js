@@ -70,6 +70,12 @@ const addMovieHandler =  () => {
 };
 
 const searchMovieHandler = () => {
+    console.log(this);
+    /**
+     * To make this really clear:
+     * The browser binds "this" for you
+     * (on event listeners) to the DOM element that triggered the event
+     */
     const filterTerm = document.getElementById('filter-title').value;
     renderMovies(filterTerm);
 };
