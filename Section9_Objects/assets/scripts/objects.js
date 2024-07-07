@@ -30,8 +30,9 @@ const renderMovies = (filter = '') => {
         // const { title: movieTitle } = info; // title에게 movieTitle이라는 새로운 이름을 줬다.
         
         let { getFormattedTitle } = movie;
-        getFormattedTitle = getFormattedTitle.bind(movie);
-        let text = getFormattedTitle() + ' - ';
+        // getFormattedTitle = getFormattedTitle.bind(movie);
+        let text = getFormattedTitle.call(movie) + ' - '; //call은 쉼표로 인자 계속 추가 apply는 1개의 배열로 인자 전달
+        // call, apply, bind 는 this 관리에 유용하다.
         for (const key in info) {
             if ( key !== 'title') {
                 text = text + `${key}: ${info[key]}`;
