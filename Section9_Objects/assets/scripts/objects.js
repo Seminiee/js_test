@@ -1,3 +1,4 @@
+"use strict";
 const addMovieBtn = document.getElementById('add-movie-btn');
 const searchBtn = document.getElementById('search-btn');
 
@@ -6,7 +7,6 @@ const movies = [];
 const renderMovies = (filter = '') => {
     const movieList = document.getElementById('movie-list');
 
-    movieList.innerHTML = '';
     if (movies.length === 0) {
         movieList.classList.remove('visible');
         return;
@@ -19,7 +19,7 @@ const renderMovies = (filter = '') => {
         ? movies 
         : movies.filter(movie => movie.info.title.includes(filter));
 
-        filteredMovies.forEach((movie) => {
+    filteredMovies.forEach(movie => {
         const movieEl = document.createElement('li');
         /**
          * if ('info' in movie) {} - in 연산자 사용해서 프로퍼티 존재 확인하기
@@ -28,11 +28,13 @@ const renderMovies = (filter = '') => {
         const { info, ...otherProps} = movie; // 순서는 중요하지 않고, 오직 키 이름만 중요함
         console.log(otherProps);
         // const { title: movieTitle } = info; // title에게 movieTitle이라는 새로운 이름을 줬다.
-        // const { getFormattedTitle } = movie;
-        let text = movie.getFormattedTitle() + ' - ';
+        
+        let { getFormattedTitle } = movie;
+        getFormattedTitle = getFormattedTitle.bind(movie);
+        let text = getFormattedTitle() + ' - ';
         for (const key in info) {
             if ( key !== 'title') {
-                text += `${key}: ${info[key]}`;
+                text = text + `${key}: ${info[key]}`;
             }
         }
         movieEl.textContent = text;
@@ -56,7 +58,8 @@ const addMovieHandler =  () => {
         },
         id: Math.random().toString(),
         //getFormattedTitle: function () { //메서드는 절-대 Arrow Function으로 작성하지 말 것!
-        getFormattedtitle() {
+        getFormattedTitle() {
+            // console.log(this);
             return this.info.title.toUpperCase(); // this는 함수의 일부인 객체를 찾도록 명령함
         }
     };
