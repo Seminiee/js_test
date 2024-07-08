@@ -5,29 +5,28 @@ class Product {
     description;
     price;
 
-    consturctor() {
-
+    consturctor(title, image, desc, price) {
+        this.title = title;
+        this.imageUrl = image;
+        this.description = desc;
+        this.price = price;
     }
 }
-console.log(new Product());
 
 const productList = {
     products: [
-        // new Product(),
-        {
-            title: 'A Pillow', 
-            imageUrl:
-             'https://m.media-amazon.com/images/I/61y6iRvb-WL._AC_UF894,1000_QL80_.jpg',
-            price: 19.99,
-            description: 'A soft pillow!'
-        },
-        {
-            title: 'A Carpet', 
-            imageUrl:
-             'https://thecarpetier.sg/cdn/shop/products/p-8041-persian-carpetcar-cash-8041-120-493235.webp?v=1710842713&width=1946',
-            price: 89.99,
-            description: 'A carpet which you might like - or not.'
-        },
+        new Product(
+            'A Pillow', 
+            'https://m.media-amazon.com/images/I/61y6iRvb-WL._AC_UF894,1000_QL80_.jpg',
+            'A soft pillow!',
+            19.99
+        ),
+        new Product(
+           'A Carpet',
+           'https://thecarpetier.sg/cdn/shop/products/p-8041-persian-carpetcar-cash-8041-120-493235.webp?v=1710842713&width=1946',
+           'A carpet which you might like - or not.',
+           89.99
+        ),
     ],
     render() {
         const renderhook = document.getElementById('app');
