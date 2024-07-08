@@ -177,3 +177,9 @@ Udemy js 강의 일자별 로그
 - Section 9 퀴즈 17: `this`
 - Section 9 236 (획득자 `Getters`& 설정자 `Setters`)
 - Section 9 237 (마무리)
+
+## <Section10 - 클래스 & 객체 지향 프로그래밍(OOP)>
+### 2024년 7월 8일(월)
+**Section 10 클래스 & OOP 강의 자료 다운로드 및 폴더 이름 변경**
+- Section 10 239 (모듈 소개)
+- Section 10 240 ("객체 지향 프로그래밍"(OOP)란 무엇인가?)
