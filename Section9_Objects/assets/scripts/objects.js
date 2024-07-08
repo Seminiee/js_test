@@ -34,7 +34,7 @@ const renderMovies = (filter = '') => {
         let text = getFormattedTitle.call(movie) + ' - '; //call은 쉼표로 인자 계속 추가 apply는 1개의 배열로 인자 전달
         // call, apply, bind 는 this 관리에 유용하다.
         for (const key in info) {
-            if ( key !== 'title') {
+            if ( key !== 'title' && key!== '_title') {
                 text = text + `${key}: ${info[key]}`;
             }
         }
@@ -54,22 +54,34 @@ const addMovieHandler =  () => {
     const newMovie = {
         //title: title, key-name === value-name일때
         info: {
-            title,
+            set title(val) {
+                if(val.trim() === '') {
+                    this._title = 'DEFAULT';
+                    return;
+                }
+                this._title = val;   
+            },
+            get title() {
+                return this._title;
+            },
             [extraName]: extraValue 
         },
         id: Math.random().toString(),
         //getFormattedTitle: function () { //메서드는 절-대 Arrow Function으로 작성하지 말 것!
         getFormattedTitle() {
-            // console.log(this);
+            console.log(this);
             return this.info.title.toUpperCase(); // this는 함수의 일부인 객체를 찾도록 명령함
         }
     };
+
+    newMovie.info.title = title;
+    console.log(newMovie.info.title);
     movies.push(newMovie);
     renderMovies();
     //console.log(newMovie);
 };
 
-const searchMovieHandler = () => {
+const searchMovieHandler = () => { //Arrow functions don't know `this`!
     console.log(this);
     /**
      * To make this really clear:

@@ -172,3 +172,8 @@ Udemy js 강의 일자별 로그
 - Section 9 231 (`this` 키워드와 이상한 작동 방식)
 - Section 9 232 (`call()`과 `apply()`)
 - Section 9 233 (브라우저가 (가끔씩) `this`에 하는 작업)
+- Section 9 234 (`this`와 화살표 함수)
+- Section 9 235 (`this` - 요약)
+- Section 9 퀴즈 17: `this`
+- Section 9 236 (획득자 `Getters`& 설정자 `Setters`)
+- Section 9 237 (마무리)
