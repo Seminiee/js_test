@@ -1,5 +1,19 @@
+class Product {
+    // field
+    title = 'DEFAULT';
+    imageUrl;
+    description;
+    price;
+
+    consturctor() {
+
+    }
+}
+console.log(new Product());
+
 const productList = {
     products: [
+        // new Product(),
         {
             title: 'A Pillow', 
             imageUrl:
