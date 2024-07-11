@@ -21,7 +21,10 @@ class ElementAttribute {
 class Component {
     constructor(renderHookId) {
         this.hookId = renderHookId;
+        this.render();
     }
+    render() {} // for OVERRIDING
+
     createRootElement(tag, cssClasses, attributes) {
         const rootElement = document.createElement(tag);
         if (cssClasses) {
@@ -129,7 +132,7 @@ class ProductList extends Component{
         // prodList.className = 'product-list';
         for (const prod of this.products) {
           const productItem = new ProductItem(prod, 'prod-list');
-          productItem.render();
+        //   productItem.render();
         //   const prodEl = productItem.render();
         //   prodList.append(prodEl);
         }
@@ -139,15 +142,19 @@ class ProductList extends Component{
 
 // const productList = {};
 
-class Shop {
+class Shop /*extends Component*/{
+    constructor() {
+        // super(); -> 이 클래스는 상속 받는 것이 아무것도 없다. (컴포넌트 확장X)
+        this.render();
+    }
     render() {
         const renderHook = document.getElementById('app');
 
         this.cart = new ShoppingCart('app');
-        this.cart.render();
+        // this.cart.render();
         // const cartEl = this.cart.render();
         const productList = new ProductList('app');
-        productList.render();
+        // productList.render();
         //const prodListEl = productList.render();
 
         // renderHook.append(cartEl);
@@ -160,7 +167,7 @@ class App {
     static init() {
         const shop = new Shop();
         // const { } = shop;
-        shop.render();
+        // shop.render();
         this.cart = shop.cart;
     }
 

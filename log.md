@@ -197,3 +197,4 @@ Udemy js 강의 일자별 로그
 - Section 10 252 (상속 소개)
 - Section 10 253 (상속 구현하기)
 - Section 10 254 (모든 곳에서 상속하기)
+- Section 10 255 (메서드 덮어쓰기와 `super()` 생성자)
