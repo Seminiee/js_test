@@ -193,3 +193,4 @@ Udemy js 강의 일자별 로그
 - Section 10 248 (통신이 까다로울 수 있습니다!)
 - Section 10 249 (정적 메서드 & 프로퍼티)
 - Section 10 250 (첫 번째 요약 & 클래스 vs 객체 리터럴)
+- Section 10 251 (`Getters`(획득자) & `Setters`(설정자))
