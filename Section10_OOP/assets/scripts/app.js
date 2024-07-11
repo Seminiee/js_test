@@ -110,6 +110,7 @@ class App {
     static cart;
     static init() {
         const shop = new Shop();
+        // const { } = shop;
         shop.render();
         this.cart = shop.cart;
     }
