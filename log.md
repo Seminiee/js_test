@@ -206,3 +206,8 @@ Udemy js 강의 일자별 로그
 - Section 10 261 (빌트인 클래스) - instanceof_and_descriptor.ipynb
 - Section 10 262 (객체 설명자 이해하기) - instanceof_and_descriptor.ipynb
 - Section 10 263 (마무리)
+
+## <Section11 - 심층학습: 생성자 함수 & 프로토타입>
+### 2024년 7월 11일(목)
+**Section 11 생성자 함수 & 프로토타입 강의 자료 다운로드 및 폴더 이름 변경**
+- Section 11 266 (생성자 함수 소개)
