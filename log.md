@@ -200,3 +200,4 @@ Udemy js 강의 일자별 로그
 - Section 10 255 (메서드 덮어쓰기와 `super()` 생성자)
 - Section 10 256 ( `super()` 생성자의 실행, 순서 & `this`)
 - Section 10 257 (메서드를 추가하는 다양한 방법)
+- Section 10 258 (Private 프로퍼티)

@@ -54,8 +54,17 @@ class ShoppingCart extends Component {
         return sum;
     }
 
+    // constructor(renderHookId) {
+    //     super(renderHookId);
+    // }
+
     constructor(renderHookId) {
-        super(renderHookId);
+        super(renderHookId,false);
+        this.orderProducts = () => {
+            console.log('Ordering...');
+            console.log(this.items);
+        }
+        this.render();
     }
 
     addProduct(product) {
@@ -76,8 +85,8 @@ class ShoppingCart extends Component {
             <button>Order Now!</button>
         `;
         const orderButton = cartEl.querySelector('button');
-        orderButton.addEventListener('click',() => this.orderProducts()); // 1st way
-        // orderButton.addEventListener('click',this.orderProducts)
+        // orderButton.addEventListener('click',() => this.orderProducts()); // 1st way
+        orderButton.addEventListener('click',this.orderProducts)
         // cartEl.className = 'cart';
         this.totalOutput = cartEl.querySelector('h2');
     }
@@ -117,15 +126,16 @@ class ProductItem extends Component {
     }
 }
 class ProductList extends Component{
-    products = [];
+    #products = [];
     constructor (renderHookId) {
         // 로컬 데이터를 초기화한 다음에 super() 실행 -> super()를 먼저, 적어도 서브 클래스에 있는 this를 실행하기 전에 호출해야함.
-        super(renderHookId); 
-        this.fetchProducts();
+        super(renderHookId,false); 
+        this.render();
+        this.#fetchProducts();
     }
 
-    fetchProducts() {
-        this.products = [ 
+    #fetchProducts() {
+        this.#products = [ 
             new Product(
                 'A Pillow', 
                 'https://m.media-amazon.com/images/I/61y6iRvb-WL._AC_UF894,1000_QL80_.jpg',
@@ -143,7 +153,7 @@ class ProductList extends Component{
     }
 
     renderProducts() {
-        for (const prod of this.products) {
+        for (const prod of this.#products) {
             const productItem = new ProductItem(prod, 'prod-list');
         }
     }
@@ -152,7 +162,7 @@ class ProductList extends Component{
         // prodList.id = 'prod-list';
         // const prodList = this.createRootElement('ul','product-list', [new ElementAttribute('id','prod-list')]);
         this.createRootElement('ul','product-list', [new ElementAttribute('id','prod-list')]);
-        if(this.products && this.products.length > 0) {
+        if(this.#products && this.#products.length > 0) {
             this.renderProducts();
         }
         // prodList.className = 'product-list';
@@ -176,10 +186,14 @@ class Shop /*extends Component*/{
     render() {
         const renderHook = document.getElementById('app');
 
-        this.cart = new ShoppingCart('app');
+        const list = this.cart = new ShoppingCart('app');
+        // console.log(list.#products); //SyntaxError: Private field '#products' must be declared in an enclosing class
         // this.cart.render();
         // const cartEl = this.cart.render();
-        const productList = new ProductList('app');
+
+        // const productList = new ProductList('app');
+        new ProductList('app');
+
         // productList.render();
         //const prodListEl = productList.render();
 
