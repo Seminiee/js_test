@@ -201,3 +201,6 @@ Udemy js 강의 일자별 로그
 - Section 10 256 ( `super()` 생성자의 실행, 순서 & `this`)
 - Section 10 257 (메서드를 추가하는 다양한 방법)
 - Section 10 258 (Private 프로퍼티)
+- Section 10 259 ("Pseudo-Private" 프로퍼티)
+- Section 10 260 (`Instances`연산자)
+- Section 10 261 (빌트인 클래스)
