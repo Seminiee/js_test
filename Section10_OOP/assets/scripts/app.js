@@ -19,9 +19,11 @@ class ElementAttribute {
     }
 }
 class Component {
-    constructor(renderHookId) {
+    constructor(renderHookId, shouldRender = true) {
         this.hookId = renderHookId;
-        this.render();
+        if (shouldRender) {
+            this.render();
+        }
     }
     render() {} // for OVERRIDING
 
@@ -78,8 +80,9 @@ class ShoppingCart extends Component {
  */
 class ProductItem extends Component {
     constructor(product,renderHookId) {
-        super(renderHookId);
+        super(renderHookId,false);
         this.product = product;
+        this.render();
     }
   
     addToCart() {
@@ -107,35 +110,51 @@ class ProductItem extends Component {
     }
 }
 class ProductList extends Component{
-    products = [
-        new Product(
-            'A Pillow', 
-            'https://m.media-amazon.com/images/I/61y6iRvb-WL._AC_UF894,1000_QL80_.jpg',
-            'A soft pillow!',
-            19.99
-        ),
-        new Product(
-           'A Carpet',
-           'https://thecarpetier.sg/cdn/shop/products/p-8041-persian-carpetcar-cash-8041-120-493235.webp?v=1710842713&width=1946',
-           'A carpet which you might like - or not.',
-           89.99
-        ),
-    ];
+    products = [];
     constructor (renderHookId) {
-        super(renderHookId);
+        // 로컬 데이터를 초기화한 다음에 super() 실행 -> super()를 먼저, 적어도 서브 클래스에 있는 this를 실행하기 전에 호출해야함.
+        super(renderHookId); 
+        this.fetchProducts();
+    }
+
+    fetchProducts() {
+        this.products = [ 
+            new Product(
+                'A Pillow', 
+                'https://m.media-amazon.com/images/I/61y6iRvb-WL._AC_UF894,1000_QL80_.jpg',
+                'A soft pillow!',
+                19.99
+            ),
+            new Product(
+               'A Carpet',
+               'https://thecarpetier.sg/cdn/shop/products/p-8041-persian-carpetcar-cash-8041-120-493235.webp?v=1710842713&width=1946',
+               'A carpet which you might like - or not.',
+               89.99
+            ),
+        ];
+        this.renderProducts(); // 데이터가 초기 콘텐츠를 렌더링한 후에 데이터가 도착하는 문제
+    }
+
+    renderProducts() {
+        for (const prod of this.products) {
+            const productItem = new ProductItem(prod, 'prod-list');
+        }
     }
     render() {
         // const prodList = document.createElement('ul');
         // prodList.id = 'prod-list';
-        const prodList = this.createRootElement('ul','product-list', [new ElementAttribute('id','prod-list')]);
-
+        // const prodList = this.createRootElement('ul','product-list', [new ElementAttribute('id','prod-list')]);
+        this.createRootElement('ul','product-list', [new ElementAttribute('id','prod-list')]);
+        if(this.products && this.products.length > 0) {
+            this.renderProducts();
+        }
         // prodList.className = 'product-list';
-        for (const prod of this.products) {
-          const productItem = new ProductItem(prod, 'prod-list');
+        // for (const prod of this.products) {
+        //   const productItem = new ProductItem(prod, 'prod-list');
         //   productItem.render();
         //   const prodEl = productItem.render();
         //   prodList.append(prodEl);
-        }
+        // }
         // return prodList;
       }
 }
