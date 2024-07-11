@@ -66,14 +66,17 @@ class ShoppingCart extends Component {
             <h2>Total: \$${0}</h2>
             <button>Order Now!</button>
         `;
-        cartEl.className = 'cart';
+        // cartEl.className = 'cart';
         this.totalOutput = cartEl.querySelector('h2');
     }
 }
-
-class ProductItem {
-    constructor(product) {
-      this.product = product;
+/**
+ * As mentioned before: For any work that involves "this", it's not just a "good convention" but required to call super() first!
+ */
+class ProductItem extends Component {
+    constructor(product,renderHookId) {
+        super(renderHookId);
+        this.product = product;
     }
   
     addToCart() {
@@ -81,25 +84,26 @@ class ProductItem {
     }
   
     render() {
-      const prodEl = document.createElement('li');
-      prodEl.className = 'product-item';
-      prodEl.innerHTML = `
-          <div>
-            <img src="${this.product.imageUrl}" alt="${this.product.title}" >
-            <div class="product-item__content">
-              <h2>${this.product.title}</h2>
-              <h3>\$${this.product.price}</h3>
-              <p>${this.product.description}</p>
-              <button>Add to Cart</button>
+        // const prodEl = document.createElement('li');
+        const prodEl= this.createRootElement('li','product-item');
+        // prodEl.className = 'product-item';
+        prodEl.innerHTML = `
+            <div>
+                <img src="${this.product.imageUrl}" alt="${this.product.title}" >
+                <div class="product-item__content">
+                <h2>${this.product.title}</h2>
+                <h3>\$${this.product.price}</h3>
+                <p>${this.product.description}</p>
+                <button>Add to Cart</button>
+                </div>
             </div>
-          </div>
-        `;
-      const addCartButton = prodEl.querySelector('button');
-      addCartButton.addEventListener('click', this.addToCart.bind(this));
-      return prodEl;
+            `;
+        const addCartButton = prodEl.querySelector('button');
+        addCartButton.addEventListener('click', this.addToCart.bind(this));
+        return prodEl;
     }
-  }
-class ProductList {
+}
+class ProductList extends Component{
     products = [
         new Product(
             'A Pillow', 
@@ -114,18 +118,22 @@ class ProductList {
            89.99
         ),
     ];
-    constructor () {
-
+    constructor (renderHookId) {
+        super(renderHookId);
     }
     render() {
-        const prodList = document.createElement('ul');
-        prodList.className = 'product-list';
+        // const prodList = document.createElement('ul');
+        // prodList.id = 'prod-list';
+        const prodList = this.createRootElement('ul','product-list', [new ElementAttribute('id','prod-list')]);
+
+        // prodList.className = 'product-list';
         for (const prod of this.products) {
-          const productItem = new ProductItem(prod);
-          const prodEl = productItem.render();
-          prodList.append(prodEl);
+          const productItem = new ProductItem(prod, 'prod-list');
+          productItem.render();
+        //   const prodEl = productItem.render();
+        //   prodList.append(prodEl);
         }
-        return prodList;
+        // return prodList;
       }
 }
 
@@ -138,11 +146,12 @@ class Shop {
         this.cart = new ShoppingCart('app');
         this.cart.render();
         // const cartEl = this.cart.render();
-        const productList = new ProductList();
-        const prodListEl = productList.render();
+        const productList = new ProductList('app');
+        productList.render();
+        //const prodListEl = productList.render();
 
         // renderHook.append(cartEl);
-        renderHook.append(prodListEl);
+        // renderHook.append(prodListEl);
     }
 }
 
