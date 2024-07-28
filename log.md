@@ -222,3 +222,7 @@ Udemy js 강의 일자별 로그
 - Section 11 274 (JavaScript 내장 프로토타입)
 - Section 11 275 (프로토타입 Setting & Getting)
 - Section 11 276 (마무리)
+
+## <Section17 - 비동기 JavaScript: 프로미스 & 콜백>
+### 2024년 7월 28일(일)
+**Section 17 비동기 JavaScript: 프로미스 & 콜백 강의 자료 다운로드 및 폴더 이름 변경**
