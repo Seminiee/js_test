@@ -214,3 +214,11 @@ Udemy js 강의 일자별 로그
 - Section 11 267 (생성자 함수 vs 클래스 & `new` 이해하기)
 - Section 11 268 (프로토타입 소개)
 - Section 11 269 (프로토타입 요약)
+- Section 11 270 (프로토타입으로 작업하기)
+- Section 11 271 (프로토타입 체인과 전역 "객체")
+- Section 11 퀴즈 19: 생성자 함수 & 프로토타입
+- Section 11 272 (클래스 & 프로토타입)
+- Section 11 273 (클래스 & 생성자 내의 메서드)
+- Section 11 274 (JavaScript 내장 프로토타입)
+- Section 11 275 (프로토타입 Setting & Getting)
+- Section 11 276 (마무리)
